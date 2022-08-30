@@ -18,9 +18,9 @@
 <body>
 	<nav class="navbar navbar-expand-lg">
 		<div class="container-fluid">
-			<a class="navbar-brand bg-dark p-4 rounded text-light h1" href="#">SpringBoot Project</a>
-			<button id="responsiveBasket" type="button" class="btn btn-danger">Mon Panier <span class="badge text-bg-secondary">4</span>
-			</button>
+			<a class="navbar-brand bg-dark p-4 rounded text-light h1" href='<c:url value="/home/" context="/springbootProject"/>'>SpringBoot Project</a>
+			<a id="responsiveBasket" type="button" href='<c:url value="/articles/basket" context="/springbootProject"/>' class="btn btn-danger">Mon Panier <span class="badge text-bg-secondary">4</span>
+			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       			<span class="navbar-toggler-icon"></span>
    			 </button>  			 
@@ -40,10 +40,10 @@
 					</li>
 				</ul>
 				<div class="d-flex flex-md-row flex-column me-md-2">
-					<a class="btn btn-outline-dark me-md-3" href='<c:url value="/home/login" context="/springbootProject"/>'>Se Connecter</a>
-					<button id="basket" type="button" class="btn btn-danger">
+					<a class="btn btn-outline-dark me-md-3" href='<c:url value="/user/login" context="/springbootProject"/>'>Se Connecter</a>
+					<a id="basket" type="button" href='<c:url value="/articles/basket" context="/springbootProject"/>' class="btn btn-danger text-light">
 						Mon Panier <span class="badge text-bg-secondary">4</span>
-					</button>
+					</a>
 				</div>
 			</div>
 		</div>

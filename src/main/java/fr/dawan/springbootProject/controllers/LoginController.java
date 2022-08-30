@@ -5,19 +5,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import fr.dawan.springbootProject.entities.UserForm;
+import fr.dawan.springbootProject.entities.LoginForm;
 
 @Controller
-@RequestMapping("/home")
-public class HomeController {
+@RequestMapping("/user")
+public class LoginController {
 
-	@GetMapping("/")
-	public String accueil() {
-		return "home";
-	}
+	@GetMapping("/login")
+    public String getLogin(@ModelAttribute("formLogin") LoginForm form) {
+        return "login";
+    }
 
-	@GetMapping("/signIn")
-	public String signIn(@ModelAttribute("formUser") UserForm userForm) {
-		return "addUser";
-	}
 }

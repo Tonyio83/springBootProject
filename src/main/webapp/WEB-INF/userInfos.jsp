@@ -15,10 +15,10 @@
 <body>
 <main>
 	<div class="container-fluid row">
-		<div class="card col-md-6">
-		<h1 class="bg-black p-4 rounded text-center text-light h3">Springboot Project</h1>
+		<div class="card col-md-6 mx-auto mt-5">
+		<h1 class="bg-black p-4 rounded text-center text-light h3 text-center">Springboot Project</h1>
 			<div class="card-body bg-light">
-				<h2 class="card-title">Vos Informations</h2>
+				<h2 class="card-title text-center">Vos Informations</h2>
 			</div>
 			<ul class="list-group list-group-flush">
 				<li class="list-group-item"><strong>Nom: </strong>Doe</li>
@@ -28,8 +28,9 @@
 				<li class="list-group-item"><strong>Téléphone: </strong>0624859568</li>	
 			</ul>
 			<div class="card-body">
-				<a href="#" class="btn btn-primary">Modifier</a> 
-				<a href='<c:url value="/home/" context="/springbootProject"/>' class="btn btn-secondary">Retour à l'accueil</a>
+				<a href='<c:url value="/user/update" context="/springbootProject"/>' class="btn btn-primary mb-2">Modifier mes informations</a> 
+				<a href="#" class="btn btn-danger mb-2">Supprimer mon compte</a>
+				<a href='<c:url value="/home/" context="/springbootProject"/>' class="btn btn-secondary mb-2">Retour à l'accueil</a>
 			</div>
 		</div>
 	</div>

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -16,21 +17,19 @@
 <body>
 	<main>
 		<div class="container my-5">
-			<form class="col-lg-6 p-3 shadow-sm mb-5 bg-body rounded mx-auto">
-				<h1 class="bg-black p-4 rounded text-center text-light h3">Springboot Project</h1>
+		<c:url value="/login" context="/springbootProject" var="urlLogin"/>
+			<form:form method="post" action="${urlLogin}" modelAttribute="formLogin" class="col-lg-6 p-3 shadow-sm mb-5 bg-body rounded mx-auto">
+				<h2 class="bg-black p-4 rounded text-center text-light h3">Springboot Project</h2>
 				<p class="bg-light p-4 rounded text-center h3">Identifiez-vous</p>
 				<div class="mb-3">
-					<label for="inputEmail1" class="form-label">Email</label> <input
-						type="email" class="form-control" id="inputEmail1"
-						aria-describedby="emailHelp"
-						placeholder="Entrez votre adresse mail">
+					<form:label path="" for="inputEmail1" class="form-label">Email</form:label> 
+					<form:input path="" type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp"/>
 					<div id="emailHelp" class="form-text">We'll never share your
 						email with anyone else.</div>
 				</div>
 				<div class="mb-3">
-					<label for="inputPassword1" class="form-label">Mot de passe</label>
-					<input type="password" class="form-control" id="inputPassword1"
-						placeholder="Entrez votre mot de passe">
+					<form:label path="" for="inputPassword1" class="form-label">Mot de passe</form:label>
+					<form:input path="" type="password" class="form-control" id="inputPassword1"/>
 				</div>
 				<div class="d-flex justify-content-center flex-column my-4">
 					<button type="submit" class="btn btn-primary mb-3">Envoyer</button>
@@ -38,7 +37,7 @@
 					<a role="button" class="btn btn-secondary text-center mb-3" href='<c:url value="/home/signIn" context="/springbootProject"/>'>Créer un compte</a>
 					<a role="button" class="btn btn-dark text-center" href='<c:url value="/home/" context="/springbootProject"/>'>Retour à l'accueil</a>
 				</div>
-			</form>
+			</form:form>
 		</div>
 	</main>
 <c:import url="footer.jsp" />

@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:import url="header.jsp">
-	<c:param name="titre" value="home" />
+	<c:param name="titre" value="springboot project" />
 </c:import>
 <main class="container">
 	<h2 class="text-center bg-dark text-light rounded p-5 mx-auto">Bienvenue sur notre boutique retrogaming !!!</h2>
@@ -12,63 +12,57 @@
     		<div class="row">
         		<div id="recipeCarousel<c:out value = "${categorie}"/>" class="carousel slide" data-bs-ride="carousel">
            	 		<div class="carousel-inner" role="listbox">
-                		<div class="carousel-item active shadow-sm mb-5 bg-body rounded">
+                		<div class="carousel-item active">
                    			<div class="col-lg-3 px-3 col-md-6">
-                        		<div class="card">
-                            		<div class="card-img bg-secondary">
+                        		<div class="card border-0 rounded">
+                            		<div class="card-img">
                                 		<img src="https://www.tradergames.fr/241796-home_default/metal-slug-3-neo-geo-aes-japan-complete-good-condition-first-run.jpg" class="img-fluid">
                             		</div>
-                            		<div class="card-img-overlay">Jeux 1</div>
                         		</div>
                     		</div>
                 		</div>
-                		<div class="carousel-item shadow-sm mb-5 bg-body rounded">
+                		<div class="carousel-item">
                     		<div class="col-lg-3 col-md-6 px-3">
-                        		<div class="card">
-                            		<div class="card-img bg-secondary">
+                        		<div class="card border-0 rounded">
+                            		<div class="card-img">
                                 		<img src="https://www.picclickimg.com/d/l400/pict/275425012779_/SEGA-MEGADRIVE-PAL-FlashBack-Sans-notice.jpg" class="img-fluid">
-                            		</div>
-                            		<div class="card-img-overlay">Jeux 2</div>
+                            		</div>                           		
                         		</div>
                     		</div>
                 		</div>
-                		<div class="carousel-item shadow-sm mb-5 bg-body rounded">
+                		<div class="carousel-item">
                     		<div class="col-lg-3 col-md-6 px-3">
-                        		<div class="card">
-                            		<div class="card-img bg-secondary">
+                        		<div class="card border-0 rounded">
+                            		<div class="card-img">
                                			<img src="" class="img-fluid">
                             		</div>
-                            		<div class="card-img-overlay">Jeux 3</div>
                         		</div>
                     		</div>
                 		</div>
-                		<div class="carousel-item shadow-sm mb-5 bg-body rounded">
+                		<div class="carousel-item">
                     		<div class="col-lg-3 col-md-6 px-3">
-                        		<div class="card"> 
-                            		<div class="card-img bg-secondary">
+                        		<div class="card border-0 rounded"> 
+                            		<div class="card-img">
                                 		<img src="" class="img-fluid">
                             		</div>
-                            		<div class="card-img-overlay">Jeux 4</div>
                         		</div>
                     		</div>
                 		</div>
-                		<div class="carousel-item shadow-sm mb-5 bg-body rounded">
+                		<div class="carousel-item">
                     		<div class="col-lg-3 col-md-6 px-3">
-                        		<div class="card">
-                            		<div class="card-img bg-secondary">
+                        		<div class="card border-0 ">
+                            		<div class="card-img">
                                 		<img src="" class="img-fluid">
                             		</div>
-                            		<div class="card-img-overlay">Jeux 5</div>
                         		</div>
                     		</div>
                 		</div>
-                		<div class="carousel-item shadow-sm mb-5 bg-body rounded">
+                		<div class="carousel-item ">
                     		<div class="col-lg-3 col-md-6 px-3">
-                        		<div class="card">
-                            		<div class="card-img bg-secondary">
+                        		<div class="card border-0 rounded">
+                            		<div class="card-img">
                                 		<img src="" class="img-fluid">
                             		</div>
-                            		<div class="card-img-overlay">Jeux 6</div>
                         		</div>
                     		</div>
                 		</div>
