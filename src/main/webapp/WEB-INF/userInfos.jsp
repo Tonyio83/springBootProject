@@ -28,15 +28,16 @@
 			    		<strong>Adresse de facturation: </strong>
 			    		<ul class="list-group list-group-numbered">
 			    		<c:forEach items="${isConnected.adresseFacturation}" var ="af">
-			    			<li class="list-group-item"><c:out value='${af.numero} ${af.rue} ${af.codePostal} ${af.ville}'/> <a class="btn btn-sm btn-primary float-end" href='<c:url value="/adresse/updateF/'<c:out value='${al.numero} ${al.rue} ${al.codePostal} ${al.ville}'/>" context="/springbootProject"/>'>Mofifier</a></li>
-			    			 </c:forEach>
+			    		
+			    			<li class="list-group-item"><c:out value='${af.numero} ${af.rue} ${af.codePostal} ${af.ville}'/> <a class="btn btn-sm btn-primary float-end" href='<c:url value="/adresse/updateF/${af.id}" context="/springbootProject"/>'>Modifier</a></li>
+			    		</c:forEach>
 			   			</ul>
 			    	</li>
 			    	<li class="list-group-item">		    		
 			    		<strong>Adresse de livraison: </strong>
-			    		<ul class="list-group list-group-numbered">
+			    		<ul class="list-group list-group-numbered">			    		
 			    		<c:forEach items="${isConnected.adresseLivraison}" var ="al">
-			    			<li class="list-group-item"><c:out value='${al.numero} ${al.rue} ${al.codePostal} ${al.ville}'/> <a class="btn btn-sm btn-primary float-end" href='<c:url value="/adresse/updateL" context="/springbootProject"/>'>Modifier</a></li>
+			    			<li class="list-group-item"><c:out value='${al.numero} ${al.rue} ${al.codePostal} ${al.ville}'/> <a class="btn btn-sm btn-primary float-end" href='<c:url value="/adresse/updateF/${al.id}" context="/springbootProject"/>'>Modifier</a></li>
 			    		</c:forEach>
 			   			</ul>
 			    	</li>	
@@ -44,7 +45,7 @@
 			</ul>
 			<div class="card-body">
 				<a href='<c:url value="/user/update" context="/springbootProject"/>' class="btn btn-primary mb-2">Modifier mes informations</a> 
-				<a href="#" class="btn btn-danger mb-2">Supprimer mon compte</a>
+				<a href='<c:url value="/user/delete/${isConnected.id}" context="/springbootProject"/>' class="btn btn-danger mb-2">Supprimer mon compte</a>
 				<a href='<c:url value="/home/" context="/springbootProject"/>' class="btn btn-secondary mb-2">Retour à l'accueil</a>
 			</div>
 		</div>

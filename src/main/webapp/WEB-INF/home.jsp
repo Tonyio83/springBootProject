@@ -18,6 +18,7 @@
                             		<div class="card-img">
                                 		<img src="https://www.tradergames.fr/241796-home_default/metal-slug-3-neo-geo-aes-japan-complete-good-condition-first-run.jpg" class="img-fluid">
                             		</div>
+                            		<button class="btn btn-sm btn-danger mx-auto">Ajouter au panier</button>
                         		</div>
                     		</div>
                 		</div>
@@ -26,7 +27,8 @@
                         		<div class="card border-0 rounded">
                             		<div class="card-img">
                                 		<img src="https://www.picclickimg.com/d/l400/pict/275425012779_/SEGA-MEGADRIVE-PAL-FlashBack-Sans-notice.jpg" class="img-fluid">
-                            		</div>                           		
+                            		</div>
+                            		<button class="btn btn-sm btn-danger mx-auto">Ajouter au panier</button>                           		
                         		</div>
                     		</div>
                 		</div>
@@ -36,6 +38,7 @@
                             		<div class="card-img">
                                			<img src="" class="img-fluid">
                             		</div>
+                            		<button class="btn btn-sm btn-danger mx-auto">Ajouter au panier</button>
                         		</div>
                     		</div>
                 		</div>
@@ -45,6 +48,7 @@
                             		<div class="card-img">
                                 		<img src="" class="img-fluid">
                             		</div>
+                            		<button class="btn btn-sm btn-danger mx-auto">Ajouter au panier</button>
                         		</div>
                     		</div>
                 		</div>
@@ -54,6 +58,7 @@
                             		<div class="card-img">
                                 		<img src="" class="img-fluid">
                             		</div>
+                            		<button class="btn btn-sm btn-danger mx-auto">Ajouter au panier</button>
                         		</div>
                     		</div>
                 		</div>
@@ -63,6 +68,7 @@
                             		<div class="card-img">
                                 		<img src="" class="img-fluid">
                             		</div>
+                            		<button class="btn btn-sm btn-danger mx-auto">Ajouter au panier</button>
                         		</div>
                     		</div>
                 		</div>

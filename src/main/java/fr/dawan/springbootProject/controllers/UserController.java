@@ -12,12 +12,14 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import fr.dawan.springbootProject.entities.Adresse;
 import fr.dawan.springbootProject.entities.Utilisateur;
+import fr.dawan.springbootProject.forms.AdresseForm;
 import fr.dawan.springbootProject.forms.MotdePasseValidation;
 import fr.dawan.springbootProject.forms.UserForm;
 import fr.dawan.springbootProject.repositories.AdresseRepository;
@@ -82,13 +84,20 @@ public class UserController {
 	}
 	
 	@GetMapping("/delete/{id}")
-	public String deleteBasket(@PathVariable long id, @ModelAttribute("user") List<Utilisateur> u) {
-		Utilisateur ut=findBasketLine(id, panier);
-        if(bl!=null) {
-            panier.remove(bl);
-        }
-        return "redirect:/articles/basket";
-    }
+	public String deleteUserById(@PathVariable long id) {
+		//model.addAttribute("adresseF", adresseRepository.findById(id));	
+		utilisateurRepository.deleteById(id);
+		return "updateAdresse";
+	}
+	
+//	@GetMapping("/delete/{id}")
+//	public String deleteBasket(@PathVariable long id, @ModelAttribute("user") List<Utilisateur> u) {
+//		Utilisateur bl=findBasketLine(id, panier);
+//        if(bl!=null) {
+//            panier.remove(bl);
+//        }
+//        return "redirect:/articles/basket";
+//    }
 
 
 }

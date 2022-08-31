@@ -8,4 +8,5 @@ public interface AdresseRepository extends JpaRepository<Adresse, Long> {
 	
 	Adresse findById(long id);
 	
+	
 }
