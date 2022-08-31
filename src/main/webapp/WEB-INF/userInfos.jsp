@@ -21,11 +21,26 @@
 				<h2 class="card-title text-center">Vos Informations</h2>
 			</div>
 			<ul class="list-group list-group-flush">
-				<li class="list-group-item"><strong>Nom: </strong>Doe</li>
-				<li class="list-group-item"><strong>Prénom: </strong>John</li>
-				<li class="list-group-item"><strong>Email: </strong>jd@gmail.com</li>
-				<li class="list-group-item"><strong>Adresse: </strong>25 rue des fuyards 80000 Amiens</li>
-				<li class="list-group-item"><strong>Téléphone: </strong>0624859568</li>	
+				<li class="list-group-item"><strong>Nom: </strong>${isConnected.nom }</li>
+				<li class="list-group-item"><strong>Prénom: </strong>${isConnected.prenom }</li>
+				<li class="list-group-item"><strong>Email: </strong>${isConnected.email }</li>
+			    	<li class="list-group-item">		    		
+			    		<strong>Adresse de facturation: </strong>
+			    		<ul class="list-group list-group-numbered">
+			    		<c:forEach items="${isConnected.adresseFacturation}" var ="af">
+			    			<li class="list-group-item"><c:out value='${af.numero} ${af.rue} ${af.codePostal} ${af.ville}'/> <a class="btn btn-sm btn-primary float-end" href='<c:url value="/adresse/updateF/'<c:out value='${al.numero} ${al.rue} ${al.codePostal} ${al.ville}'/>" context="/springbootProject"/>'>Mofifier</a></li>
+			    			 </c:forEach>
+			   			</ul>
+			    	</li>
+			    	<li class="list-group-item">		    		
+			    		<strong>Adresse de livraison: </strong>
+			    		<ul class="list-group list-group-numbered">
+			    		<c:forEach items="${isConnected.adresseLivraison}" var ="al">
+			    			<li class="list-group-item"><c:out value='${al.numero} ${al.rue} ${al.codePostal} ${al.ville}'/> <a class="btn btn-sm btn-primary float-end" href='<c:url value="/adresse/updateL" context="/springbootProject"/>'>Modifier</a></li>
+			    		</c:forEach>
+			   			</ul>
+			    	</li>	
+				<li class="list-group-item"><strong>Téléphone: </strong>${isConnected.telephone }</li>	
 			</ul>
 			<div class="card-body">
 				<a href='<c:url value="/user/update" context="/springbootProject"/>' class="btn btn-primary mb-2">Modifier mes informations</a> 

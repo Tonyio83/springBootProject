@@ -23,7 +23,6 @@
 				        <th>Catégorie</th>
 				        <th>Marque</th>
 				        <th>Quantité</th>
-				        <th>Disponible</th>
 				        <th>Action</th>
 			        </tr>
 			    </thead>
@@ -37,8 +36,7 @@
 				        <td><c:out value="${ar.photo}"/></td>
 				        <td><c:out value="${ar.categorie}"/></td>
 				        <td><c:out value="${ar.marque}"/></td>
-				        <td><c:out value="${ar.quantite}"/></td>      
-				        <td><c:out value="${ar.disponible}"/></td>   
+				        <td><c:out value="${ar.quantite}"/></td>         
 				        <c:url value='/admin/articles/delete/${ar.id}' context="/springmvc" var="urlDelete"/>
 				        <c:url value='/admin/articles/update/${ar.id}' context="/springmvc" var="urlUpdate"/>
         				<td><a class="btn btn-danger me-3" href="${urlUpdate}">Modifier</a><a class="btn btn-danger" href="${urlDelete}">Supprimer</a></td>				           

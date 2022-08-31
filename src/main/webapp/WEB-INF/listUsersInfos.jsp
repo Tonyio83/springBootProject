@@ -6,7 +6,7 @@
 </c:import>
 <main>
 	<div class="container-fluid row">
-		<div class="card col-md-8 mx-auto p-5 mt-5">
+		<div class="card  mx-auto p-5 mt-5">
 			<h2 class="text-center mb-5 bg-dark rounded text-light p-3">Liste des utilisateurs</h2>
 			<c:if test="${empty users}">
 			<div class="alert alert-danger text-center h3">Vous n'avez pas d'utilisateurs</div>
@@ -33,8 +33,20 @@
 			        <td><c:out value="${u.nom}"/></td>
 			        <td><c:out value="${u.prenom}"/></td>
 			        <td><c:out value="${u.email}"/></td>
-			        <td><c:out value="${u.adresseFacturation}"/></td>
-			        <td><c:out value="${u.adresseLivraison}"/></td>
+			        <td>
+			        	<ul class="list-group">
+			        	<c:forEach items="${u.adresseFacturation}" var ="af">
+			        		<li class="list-group-item"><c:out value='${af.numero} ${af.rue} ${af.codePostal} ${af.ville}'/></li>	
+			        	</c:forEach>
+			        	</ul>
+			        </td>
+			        <td>
+				        <ul class="list-group">
+				        <c:forEach items="${u.adresseLivraison}" var ="al">
+				        	<li class="list-group-item"><c:out value='${al.numero} ${al.rue} ${al.codePostal} ${al.ville}'/></li>
+				        </c:forEach>
+				        </ul>
+			        </td>
 			        <td><c:out value="${u.telephone}"/></td>
 			        <td><c:out value="${u.dateNaissance}"/></td>      
 			        <td><c:out value="${u.dateInscription}"/></td>      

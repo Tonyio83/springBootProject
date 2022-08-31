@@ -22,28 +22,29 @@
 				<h1 class="bg-black p-4 rounded text-center text-light h3">Springboot Project</h1>
 				<p class="bg-light p-4 rounded text-center h3">Modifiez vos Informations</p>
 				<div class="mb-3">
-					<form:label path="" for="inputName" class="form-label">Nom</form:label> 
-					<form:input path="" type="text" class="form-control" id="inputName" placeholder="Entrez votre Nom" value="Doe"/>
+					<form:label path="nom" for="inputName" class="form-label">Nom</form:label> 
+					<form:input path="nom" type="text" class="form-control" id="inputName" value="${isConnected.nom}"/>
+					<form:errors path="nom" class="text-danger small" />
 				</div>
 				<div class="mb-3">
-					<form:label path="" for="inputFirstName" class="form-label">Prénom</form:label> 
-					<form:input path="" type="text" class="form-control" id="inputFirstName" placeholder="Entrez votre Prénom" value="John"/>
+					<form:label path="prenom" for="inputFirstName" class="form-label">Prénom</form:label> 
+					<form:input path="prenom" type="text" class="form-control" id="inputFirstName" value="${isConnected.prenom}"/>
+					<form:errors path="prenom" class="text-danger small" />
 				</div>
 				<div class="mb-3">
-					<form:label path="" for="inputEmail" class="form-label">Email</form:label> 
-					<form:input path="" type="email" class="form-control" id="inputEmail" placeholder="Entrez votre adresse mail" value="jd@dawan.fr"/>
+					<form:label path="email" for="inputEmail" class="form-label">Email</form:label> 
+					<form:input path="email" type="email" class="form-control" id="inputEmail"  value="${isConnected.email}"/>
+					<form:errors path="email" class="text-danger small" />
 				</div>
 				<div class="mb-3">
-					<form:label path="" for="inputBirthDate" class="form-label">Date de naissance</form:label> 
-					<form:input path="" type="date" class="form-control" id="inputBirthDate" placeholder="Entrez votre date de naissance" value="1981-05-06"/>
+					<form:label path="dateNaissance" for="inputBirthDate" class="form-label">Date de naissance</form:label> 
+					<form:input path="dateNaissance" type="date" class="form-control" id="inputBirthDate" value="${isConnected.dateNaissance}"/>
+					<form:errors path="dateNaissance" class="text-danger small" />
 				</div>
 				<div class="mb-3">
-					<form:label path="" for="inputAddress" class="form-label">Adresse</form:label> 
-					<form:input path="" type="text" class="form-control" id="inputAddress" value="25 rue des fuyards 80000 Amiens"/>
-				</div>
-				<div class="mb-3">
-					<form:label path="" for="inputPhone" class="form-label">Téléphone</form:label> 
-					<form:input path="" type="text" class="form-control" id="inputBirthDate" placeholder="Entrez votre numéro de téléphone" value="0624859568"/>
+					<form:label path="telephone" for="inputPhone" class="form-label">Téléphone</form:label> 
+					<form:input path="telephone" type="text" class="form-control" id="inputBirthDate" value="${isConnected.telephone}"/>
+					<form:errors path="telephone" class="text-danger small" />
 				</div>
 				<div class="d-flex justify-content-center flex-column my-4">
 					<button type="submit" class="btn btn-primary mb-3">Envoyer les modifications</button>
